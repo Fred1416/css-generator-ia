@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>CSS Generator IA</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS Generator <span>IA ⚡</span></h1>
+            <p class="subtitulo">Descreva o que você imagina e veja a mágica acontecer</p>
+        </header>
+
+        <div class="input-section">
+            <textarea 
+                rows="3" 
+                class="input-texto" 
+                placeholder="Ex: Bola azul pingando, forma girando, botão com gradiente..." 
+                maxlength="500">
+            </textarea>
+            <div class="input-info">
+                <span class="char-count"><span class="current-chars">0</span>/500</span>
+                <button class="botao">Gerar Código ⚡️</button>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Gerando seu código...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" style="display: none;"></div>
+
+        <!-- Resultado -->
+        <div class="resultado">
+            <div class="resultado-item">
+                <div class="resultado-header">
+                    <h2>📝 Código Gerado</h2>
+                    <button class="btn-copiar" title="Copiar código">📋 Copiar</button>
+                </div>
+                <div class="bloco-codigo"></div>
+            </div>
+
+            <div class="resultado-item">
+                <h2>👁️ Preview</h2>
+                <iframe class="codigo-resposta" sandbox="allow-scripts"></iframe>
+            </div>
+        </div>
+
+        <!-- Histórico -->
+        <div class="historico-section">
+            <h3>📚 Gerações Recentes</h3>
+            <div class="historico-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+
+</html>
