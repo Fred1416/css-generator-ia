@@ -13,6 +13,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// 4.1 Permite que o servidor entregue nosso Front-end!
+app.use(express.static(__dirname));
+
 // 5. A Rota: É como se fosse o "Caixa" onde o Garçom (seu script.js) vai fazer o pedido
 app.post('/api/gerar-css', async (req, res) => {
     
@@ -70,8 +73,9 @@ app.post('/api/gerar-css', async (req, res) => {
     }
 });
 
-// 6. Liga o servidor (Abre as portas do restaurante na porta 3000)
-const PORTA = 3000;
+// 6. Liga o servidor (Abre as portas do restaurante)
+// O process.env.PORT é necessário para a Render!
+const PORTA = process.env.PORT || 3000;
 app.listen(PORTA, () => {
     console.log(`🚀 A Cozinha tá aberta e rodando na porta ${PORTA}!`);
 });

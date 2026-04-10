@@ -71,7 +71,7 @@ async function gerarCodigo() {
     botao.disabled = true;
     
     try {
-        const resposta = await fetch("http://localhost:3000/api/gerar-css", {
+        const resposta = await fetch("/api/gerar-css", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
